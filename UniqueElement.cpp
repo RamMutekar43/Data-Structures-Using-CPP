@@ -43,7 +43,7 @@ int main(){
     }
     // if uniqueElement is not equal to smallEle - 1
     if(uniqueElement!=smallEle-1) {
-        // Display the Unique element
+        // display the Unique element
         cout<<"Unique element in the array: "<<uniqueElement<<endl;
     } else{
         // display message if no unique element is found
