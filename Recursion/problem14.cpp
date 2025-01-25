@@ -11,7 +11,7 @@ int gcd(int a, int b){
 int main(){
 
     int ans = gcd(54,72);
-    cout<<ans<<endl;
+    cout<<ans<<endl ;
 
     return 0;
 }
