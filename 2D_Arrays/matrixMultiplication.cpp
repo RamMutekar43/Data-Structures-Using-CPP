@@ -49,7 +49,7 @@ int main(){
     // loop to print result of matrix multiplication
     for(int i=0;i<r1;i++){
         for(int j=0;j<c2;j++){
-            cout<<ans[i][j]<<" "; // print result
+            cout<<ans[i][j]<<" " ; // print result
         }
     }
 
