@@ -5,6 +5,6 @@ int main(){
     int *ptr = &arr[0];
     cout<<ptr<<"\n";
     *ptr++;
-    cout<<arr<<"  "<<ptr<<"\n";
+    cout<<arr<<"  "<<ptr<<"\n" ;
     return 0;
 }
