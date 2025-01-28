@@ -1,4 +1,6 @@
 // 2,5,4,1,3
+// number of passes requiresd are " n-1 " 
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -6,12 +8,15 @@ using namespace std;
 // global function to sort elements: "Bubble Sort" 
 void bubbleSort(vector<int>&V){
     int n = V.size();
+    bool flag = true;
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-1-i;j++){
+            flag = false;
             if(V[j]>V[j+1]){
                 swap(V[j],V[j+1]);
             }
         }
+        if(!flag) break;
     }
 }
 
