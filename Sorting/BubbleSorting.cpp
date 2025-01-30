@@ -1,6 +1,8 @@
 // 2,5,4,1,3
 // number of passes requiresd are " n-1 " 
 
+// it is a stable algortithm because, after sorting the order of elems does not change
+
 #include<iostream>
 #include<vector>
 using namespace std;
