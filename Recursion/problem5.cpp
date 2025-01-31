@@ -1,3 +1,5 @@
+// Find a to th power b of a number
+
 #include<iostream>
 using namespace std;
 int findPower(int a, int b){
@@ -5,10 +7,10 @@ int findPower(int a, int b){
         return 1;
     }
     else if(b%2!=0){
-        return a*findPower(a,b/2)*findPower(a,b/2);
+        return a*findPower(a,b/2)*findPower(a,b/2); // if power is odd
     }
     else{
-        return findPower(a,b/2)*findPower(a,b/2);
+        return findPower(a,b/2)*findPower(a,b/2); // if power is even
     }
 }
 int main(){

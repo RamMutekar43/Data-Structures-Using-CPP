@@ -1,3 +1,5 @@
+// find the maximum element in the array
+
 #include<iostream>
 using namespace std;
 int maxElem(int *arr,int idx, int size){

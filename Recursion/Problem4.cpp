@@ -1,3 +1,5 @@
+// find n to the power p of a numbber
+
 #include<iostream>
 using namespace std;
 int findPower(int a,int b){
