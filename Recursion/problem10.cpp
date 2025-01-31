@@ -1,4 +1,4 @@
-// program to check wheather the given no is pallindrome or not
+// program to check wheather the given number is pallindrome or not
 
 // compare 1st digit of num last digit of temp
 // if both are equal then remove 1st digit of num and last digit of temp
@@ -9,12 +9,12 @@
 #include<iostream>
 using namespace std;
 
-bool palindrom(int num, int *temp){
+bool palindrom(int num, int *temp){         // palindrom( 88 , *88)
     // Base case 
-    if(num>=0 && num<=9){
-        int lastdigit = (*temp)%10;
-        (*temp) = (*temp)/10;
-        return (num == lastdigit);
+    if(num>=0 && num<=9){                   
+        int lastdigit = (*temp)%10;         // lastdigit = *88 % 10;  i.e  8
+        (*temp) = (*temp)/10;               // *88 = *88/10  = *8
+        return (num == lastdigit);          // if num == temp return true else false
     } 
 
     bool result = (palindrom(num/10, temp) && (num%10) == ((*temp)%10));

@@ -1,3 +1,5 @@
+// sum of all elements in the array
+
 #include<iostream>
 using namespace std;
 int sumElem(int *arr,int idx, int size){

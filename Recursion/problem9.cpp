@@ -1,3 +1,5 @@
+// remove repitition of "a" from a string
+
 #include<iostream>
 using namespace std;
 string removeRep(string &s, int idx, int size){
