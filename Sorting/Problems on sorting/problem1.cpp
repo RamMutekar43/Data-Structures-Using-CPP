@@ -9,10 +9,15 @@ using namespace std;
 //finction to sort the elements
 void sortElems(vector<int> &v){
     int n=v.size();
+    bool flag =  false;
     for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
-            if()
+        for(int j=0;j<n-1;j++){
+            if(v[j]==0 && v[j+1]!=0){
+                swap(v[j],v[j+1]);
+                flag = true;
+            }
         }
+        if(!flag) break;
     }
 }
 
