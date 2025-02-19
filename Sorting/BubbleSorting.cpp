@@ -10,12 +10,12 @@ using namespace std;
 // global function to sort elements: "Bubble Sort" 
 void bubbleSort(vector<int>&V){
     int n = V.size();
-    bool flag = true;
+    bool flag = false;
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-1-i;j++){
-            flag = false;
             if(V[j]>V[j+1]){
                 swap(V[j],V[j+1]);
+                flag = true;
             }
         }
         if(!flag) break;
