@@ -42,22 +42,33 @@ void merge(int arr[],int l,int mid,int r){
 
 }
 
+// Function to perform merge sort on an array
 void mergeSort(int arr[], int l, int r){
-    // base case
+    // Base case: if the subarray has only one element, it is already sorted
     if(l>=r) return;
 
+    // Calculate the midpoint of the subarray
     int mid=(l+r)/2;
+
+    // Recursively sort the left and right subarrays
     mergeSort(arr,l,mid);
     mergeSort(arr,mid+1,r);
+
+    // Merge the sorted subarrays
     merge(arr,l,mid,r);
 
 }
 int main(){
-    
+    // Example array to be sorted
     int arr[] = {10,28,24,6,34,18,38,44};
+
+    // Calculate the size of the array
     int n = sizeof(arr)/sizeof(arr[0]);
 
+    // Perform merge sort on the array
     mergeSort(arr,0,n-1);
+
+    // Print the sorted array
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
