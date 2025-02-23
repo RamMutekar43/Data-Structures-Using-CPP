@@ -23,18 +23,21 @@ void merge(int arr[],int l,int mid,int r){
     // Merge the temporary arrays back into the original array
     while(i<an && j<bn){
         if(a[i]<=b[j]){
-            arr[k++]=a[i++];
+            arr[k++]=a[i++];  // Copy smaller element from left subarray
         }
         else{
-            arr[k++]=b[j++];
+            arr[k++]=b[j++];  // Copy smaller element from right subarray
         }
     }
 
+    // Copy any remaining elements from the left subarray
     while(i<an){
         arr[k++]=a[i++];
     }
+
+    // Copy any remaining elements from the right subarray
     while(j<bn){
-        arr[k++]=b[i=j++];
+        arr[k++]=b[j++];
     }
 
 }
