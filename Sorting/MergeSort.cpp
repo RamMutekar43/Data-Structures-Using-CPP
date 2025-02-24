@@ -58,6 +58,7 @@ void mergeSort(int arr[], int l, int r){
     merge(arr,l,mid,r);
 
 }
+
 int main(){
     // Example array to be sorted
     int arr[] = {10,28,24,6,34,18,38,44};
