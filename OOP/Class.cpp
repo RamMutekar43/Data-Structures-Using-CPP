@@ -3,7 +3,7 @@ using namespace std;
 
 // Create  class name fruit
 class fruit{
-    public:
+    public:     // classes are by default private. to let the objects access the properties of class, it need to make public.
     string name;
     string color;
 };
@@ -18,10 +18,10 @@ int main(){
 
     // 2nd method - using new keyword. We get a pointer variable
     fruit *mango = new fruit();
-    mango->name = "Mango";      // Arrow operator need to use to set values if object is crated using new keyword
+    mango->name = "Mango";      // Arrow operator "->" need to use to set values if object is crated using new keyword
     mango->color = "Yellow";
 
-    cout<<mango->name<<"....."<<mango->color<<"\n";     // Arrow operator need to use to print values if object is crated using new keyword
+    cout<<mango->name<<"....."<<mango->color<<"\n";     // Arrow operator "->" need to use to print values if object is crated using new keyword
 
     return 0;
 }
