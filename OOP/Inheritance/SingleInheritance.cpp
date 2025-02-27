@@ -17,6 +17,7 @@ class Child: public Parent{
 };
 
 int main(){
+    
     Child a;
     return 0;
 }
