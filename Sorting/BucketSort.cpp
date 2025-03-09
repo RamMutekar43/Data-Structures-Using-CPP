@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include <cmath>
 using namespace std;
 
 void bucketSort(float arr[], int n){
@@ -10,7 +11,7 @@ void bucketSort(float arr[], int n){
     // 
     float minElem = arr[0];
     float maxElem = arr[0];
-    for (int i=1; i<n; i++){{
+    for (int i=1;i<n;i++){{
         minElem = min(minElem, arr[i]);
         maxElem = max(maxElem, arr[i]);
     }}
@@ -20,8 +21,8 @@ void bucketSort(float arr[], int n){
     // Insert elements into the vector buckets based on their values.
     for(int i=0;i<n;i++){
         // Calculate the index of the bucket where the current element should be inserted.
-        int idx = (arr[i]-minElem)/range;
-         float diff = (arr[i]-minElem)/range - idx;
+        int idx = std::floor(arr[i]-minElem)/range;
+         float diff = ((arr[i]-minElem)/range) - idx;
          if(diff==0 && arr[i]!=minElem){
             bucket[idx-1].push_back(arr[i]);
          }
