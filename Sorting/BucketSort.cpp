@@ -8,7 +8,7 @@ void bucketSort(float arr[], int n){
     // Create a vector to store the values and initialize it with 'n' empty buckets.
     vector<vector<float>>bucket(n,vector<float>());
 
-    // 
+    // Find the minimum and maximum elements in the array
     float minElem = arr[0];
     float maxElem = arr[0];
     for (int i=1;i<n;i++){{
@@ -16,19 +16,21 @@ void bucketSort(float arr[], int n){
         maxElem = max(maxElem, arr[i]);
     }}
 
+    // Calculate the range of the array
     float range = (maxElem-minElem)/n;
 
     // Insert elements into the vector buckets based on their values.
     for(int i=0;i<n;i++){
         // Calculate the index of the bucket where the current element should be inserted.
         int idx = std::floor(arr[i]-minElem)/range;
-         float diff = ((arr[i]-minElem)/range) - idx;
-         if(diff==0 && arr[i]!=minElem){
-            bucket[idx-1].push_back(arr[i]);
-         }
-         else{
-            bucket[idx].push_back(arr[i]);
-         }
+        float diff = ((arr[i]-minElem)/range) - idx;
+        // Handle edge cases where the element is exactly at the boundary of two buckets
+        if(diff==0 && arr[i]!=minElem){
+           bucket[idx-1].push_back(arr[i]);
+        }
+        else{
+           bucket[idx].push_back(arr[i]);
+        }
     }
 
     // Sort the sub-buckets using the built-in sort function. 
