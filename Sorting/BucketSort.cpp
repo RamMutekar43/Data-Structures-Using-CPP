@@ -7,11 +7,27 @@ void bucketSort(float arr[], int n){
     // Create a vector to store the values and initialize it with 'n' empty buckets.
     vector<vector<float>>bucket(n,vector<float>());
 
+    // 
+    float minElem = arr[0];
+    float maxElem = arr[0];
+    for (int i=1; i<n; i++){{
+        minElem = min(minElem, arr[i]);
+        maxElem = max(maxElem, arr[i]);
+    }}
+
+    float range = (maxElem-minElem)/n;
+
     // Insert elements into the vector buckets based on their values.
     for(int i=0;i<n;i++){
         // Calculate the index of the bucket where the current element should be inserted.
-        int idx = arr[i]*n;
-        bucket[idx].push_back(arr[i]);
+        int idx = (arr[i]-minElem)/range;
+         float diff = (arr[i]-minElem)/range - idx;
+         if(diff==0 && arr[i]!=minElem){
+            bucket[idx-1].push_back(arr[i]);
+         }
+         else{
+            bucket[idx].push_back(arr[i]);
+         }
     }
 
     // Sort the sub-buckets using the built-in sort function. 
