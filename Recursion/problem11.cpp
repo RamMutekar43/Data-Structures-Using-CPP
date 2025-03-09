@@ -1,4 +1,4 @@
-// 
+// print numbers from 0 to n input
 #include<iostream>
 using namespace std;
 

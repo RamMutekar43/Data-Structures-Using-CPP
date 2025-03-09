@@ -1,3 +1,4 @@
+//print k multiples of input n 
 #include<iostream>
 using namespace std;
 void multiple(int n, int k){

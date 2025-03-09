@@ -1,3 +1,4 @@
+// Recursive Summation of Alternating Series  i.e. input 3, 1-2+3 = 2
 #include<iostream>
 using namespace std;
 int function(int n){
