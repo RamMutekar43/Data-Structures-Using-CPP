@@ -13,8 +13,8 @@ void subsetSum(int *arr, int n, int idx, int sum,vector<int> &result){
 }
 
 int main(){
-    int arr[] = {2,4,5};
-    int n = 3;
+    int arr[] = {2,4};
+    int n = 2;
     vector<int>result;
     subsetSum(arr, n, 0, 0, result);
 
