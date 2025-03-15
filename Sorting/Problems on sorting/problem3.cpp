@@ -16,7 +16,7 @@ int partition(int arr[], int first, int last){
 }
 
 int kthElem(int arr[], int l, int r, int k){
-    
+
     if(k>0 && k<=r-l+1){
         int pos = partition(arr, l, r);
         if(pos-l == k-1) return arr[pos];
@@ -29,13 +29,14 @@ int kthElem(int arr[], int l, int r, int k){
     }
     return INT_MAX;
 }
+
 int main(){
 
     int arr[] = {10,28,24,6,34,18,38,44};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int k;
-    cout<<"Enter the value of k: ";
-    cin>>k;
+    int k=5;
+    // cout<<"Enter the value of k: ";
+    // cin>>k;
 
     cout <<kthElem(arr, 0, n-1, k)<<"\n";
     return 0;
