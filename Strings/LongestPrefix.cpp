@@ -1,3 +1,6 @@
+// find the longest prefix of the strings present in the array of the strings
+// time complexity - O(nlogn * m) where n is size of the array and m is the generl length of the string
+
 #include<iostream>
 #include<vector>
 #include<cstring>
