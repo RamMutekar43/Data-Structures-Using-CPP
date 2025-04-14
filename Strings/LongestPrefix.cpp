@@ -17,8 +17,7 @@ string longestPrefix(vector<string> strs){
             ans+=str1[i];
             i++;
             j++;
-        }
-        else{
+        }else{
             break;
         }
     }
