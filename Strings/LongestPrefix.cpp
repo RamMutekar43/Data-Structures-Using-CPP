@@ -6,7 +6,7 @@
 #include<cstring>
 #include<algorithm>
 using namespace std;
-string longestPrefix(vector<string> strs){
+string longestPrefix(vector<string> &strs){
 
     sort(strs.begin(),strs.end());
 
