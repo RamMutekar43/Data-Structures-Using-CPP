@@ -1,3 +1,5 @@
+// check whether strings are isomorphic or not
+
 #include<iostream>
 #include<cstring>
 #include<vector>
