@@ -47,6 +47,39 @@ void insertAtKposition(Node* &head, int val, int pos){
     temp->next=newNode;
 }
 
+void deleteHead(Node* &head){
+    Node* temp = head;
+    head=head->next;
+    free(temp);
+}
+
+void deleteTail(Node* &head){
+    Node* temp = head;
+
+    while(temp->next->next!=NULL){
+        temp=temp->next;
+    }
+    free(temp->next);
+    temp->next=NULL;
+}
+
+void deleteAtKposition(Node* &head, int idx){
+    if(idx==0){
+        deleteHead(head);
+        return;
+    }
+
+    int count=0;
+    Node* temp = head;
+    while(count!=idx-1){
+        temp=temp->next;
+        count++;
+    }
+    Node* n = 
+    temp->next=temp->next->next;
+
+}
+
 void display(Node* head){
     while(head!=NULL){
         cout<<head->val<<"->";
@@ -60,17 +93,14 @@ int main(){
     // cout<<n->val<<"  "<<n->next;
 
     Node* head = NULL;
-    insertAtHead(head,2);
-    display(head);
-    insertAtHead(head,4);
-    display(head);
     insertAtHead(head,6);
-    display(head);
+    insertAtHead(head,5);
+    insertAtHead(head,4);
     insertAtHead(head,3);
+    insertAtHead(head,2);
+    insertAtHead(head,1);
     display(head);
-    insertAtTail(head,0);
-    display(head);
-    insertAtKposition(head,11,2);
+    deleteAtKposition(head,2);
     display(head);
 
     return 0;
